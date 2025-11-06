@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Конвертер азбуки Морзе</title>
   </head>
   <body>
+    <h1>Конвертер азбуки Морзе</h1>
     <form
       enctype="multipart/form-data"
       action="http://localhost:8080/upload"
       method="post"
     >
-      <input type="file" name="myFile" />
-      <input type="submit" value="upload" />
+      <input type="file" name="myFile" required />
+      <button type="submit">Загрузить и конвертировать</button>
     </form>
   </body>
 </html>
