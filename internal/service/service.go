@@ -11,7 +11,7 @@ func ConvertAutomatically(input string) (string, error) {
 	trimmed := strings.TrimSpace(input)
 
 	// если строка состоит только из точек, тире и пробелов — это Морзе
-	if isMorse(trimmed) {
+	if IsMorse(trimmed) { // Используем публичную IsMorse
 		return morse.ToText(trimmed), nil
 	}
 
@@ -19,8 +19,9 @@ func ConvertAutomatically(input string) (string, error) {
 	return morse.ToMorse(trimmed), nil
 }
 
-// Проверяем, похожа ли строка на Морзе
-func isMorse(s string) bool {
+// IsMorse — проверяет, похожа ли строка на Морзе.
+// Сделана публичной для использования в обработчиках.
+func IsMorse(s string) bool {
 	for _, r := range s {
 		if r != '.' && r != '-' && r != ' ' && r != '\n' && r != '\r' {
 			return false
