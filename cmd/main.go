@@ -8,7 +8,7 @@ import (
 
 func main() {
 	logger := log.New(log.Writer(), "morse-server: ", log.LstdFlags|log.Lshortfile)
-
+	// Исправления для повторной сдачи
 	srv := server.NewServer(logger)
 	logger.Println("Сервер запущен на порту 8080...")
 
